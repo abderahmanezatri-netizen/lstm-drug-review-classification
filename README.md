@@ -66,16 +66,16 @@ All 12 configurations completed eight epochs. Checkpoints and configurations wer
 
 WMC was selected on validation macro F1. CIFG obtained the highest test accuracy, while Vanilla obtained the highest test macro F1. These are observations from one seed, rather than evidence of a universally superior architecture. Neutral reviews remain difficult; they represent about 9% of the selected data.
 
-Metrics, histories, vocabulary, split hashes and environment information are in `results/gpu_45min/`. Comparison plots and confusion matrices are in `output/gpu/figures/`; `output/gpu/hyperparameters.csv` records the configuration comparison.
+Metrics, histories, vocabulary, split hashes and environment information are in `results/final/`. Comparison plots and confusion matrices are in `output/gpu/figures/`; `output/gpu/hyperparameters.csv` records the configuration comparison.
 
 ## Prediction
 
 The three selected checkpoints are included. Prediction does not require downloading the dataset or retraining.
 
 ```sh
-python -m src.predict --checkpoint results/gpu_45min/checkpoints/vanilla_class_weight.pt --text "This medicine helped me sleep but caused nausea."
-python -m src.predict --checkpoint results/gpu_45min/checkpoints/cifg_class_weight.pt --text "This medicine helped me sleep but caused nausea."
-python -m src.predict --checkpoint results/gpu_45min/checkpoints/wmc_class_weight.pt --text "This medicine helped me sleep but caused nausea."
+python -m src.predict --checkpoint results/final/checkpoints/vanilla_class_weight.pt --text "This medicine helped me sleep but caused nausea."
+python -m src.predict --checkpoint results/final/checkpoints/cifg_class_weight.pt --text "This medicine helped me sleep but caused nausea."
+python -m src.predict --checkpoint results/final/checkpoints/wmc_class_weight.pt --text "This medicine helped me sleep but caused nausea."
 ```
 
 Outputs are probabilities for negative, neutral and positive sentiment. The vocabulary is loaded from the checkpoint experiment folder.
@@ -83,7 +83,7 @@ Outputs are probabilities for negative, neutral and positive sentiment. The voca
 ## Reproduce training
 
 ```sh
-python -m src.train_fast --device cuda --minutes 45 --epochs 8 --output results/reproduce
+python -m src.train_fast --device cuda --epochs 8 --output results/reproduce
 ```
 
 Use `--device cpu` without CUDA, or `--device auto` to benchmark available devices. The runtime budget can result in fewer complete epochs on slower hardware. Use a new output directory to preserve existing results.

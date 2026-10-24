@@ -11,7 +11,7 @@
       "val_macro_f1": 0.5749352642884675,
       "best_epoch": 7,
       "seconds": 125.2489999999998,
-      "checkpoint": "results/gpu_45min/checkpoints/vanilla_class_weight.pt",
+      "checkpoint": "results/final/checkpoints/vanilla_class_weight.pt",
       "test": {
         "accuracy": 0.7396666666666667,
         "macro_f1": 0.5727393469498041,
@@ -78,7 +78,7 @@
       "val_macro_f1": 0.5715022618525349,
       "best_epoch": 4,
       "seconds": 126.17299999999977,
-      "checkpoint": "results/gpu_45min/checkpoints/cifg_class_weight.pt",
+      "checkpoint": "results/final/checkpoints/cifg_class_weight.pt",
       "test": {
         "accuracy": 0.7563333333333333,
         "macro_f1": 0.5661975816691319,
@@ -145,7 +145,7 @@
       "val_macro_f1": 0.5809669144229658,
       "best_epoch": 4,
       "seconds": 205.67200000000003,
-      "checkpoint": "results/gpu_45min/checkpoints/wmc_class_weight.pt",
+      "checkpoint": "results/final/checkpoints/wmc_class_weight.pt",
       "test": {
         "accuracy": 0.746,
         "macro_f1": 0.550495279993772,

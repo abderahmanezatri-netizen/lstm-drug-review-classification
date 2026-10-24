@@ -17,12 +17,12 @@ tmp/
 
 # Keep only the final experiment
 results/*
-!results/gpu_45min/
-results/gpu_45min/checkpoints/*
-!results/gpu_45min/checkpoints/vanilla_class_weight.pt
-!results/gpu_45min/checkpoints/cifg_class_weight.pt
-!results/gpu_45min/checkpoints/wmc_class_weight.pt
-results/gpu_45min/progress.json
+!results/final/
+results/final/checkpoints/*
+!results/final/checkpoints/vanilla_class_weight.pt
+!results/final/checkpoints/cifg_class_weight.pt
+!results/final/checkpoints/wmc_class_weight.pt
+results/final/progress.json
 
 # Editor and operating-system files
 .vscode/

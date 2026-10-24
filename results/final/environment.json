@@ -17,7 +17,7 @@
     "minutes": 45.0,
     "device": "cuda",
     "data": "data",
-    "output": "results/gpu_45min"
+    "output": "results/final"
   },
   "numpy": "2.5.3",
   "classes": [
