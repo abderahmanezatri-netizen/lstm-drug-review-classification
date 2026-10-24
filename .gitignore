@@ -29,3 +29,7 @@ results/gpu_45min/progress.json
 .idea/
 Thumbs.db
 .DS_Store
+
+# Report deliverables are kept locally and submitted separately
+output/pdf/
+report_details.json

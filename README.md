@@ -126,6 +126,8 @@ UCI data is downloaded when `data/drugs.zip` is absent. Keep that archive for of
 
 ## Build the report and sharing archive
 
+The report and `report_details.json` are kept locally and submitted separately; they are not included in this repository. Running the report builder generates local PDF and Markdown copies. To add author information, create a local `report_details.json` with `team_members` (a list of names), `lab_group` and `repository_url`.
+
 These commands read saved results and do not retrain:
 
 ```sh
@@ -138,7 +140,7 @@ The first export generates the figures. The report builder reads the measured ex
 
 ## Before submission
 
-Fill in `team_members`, `lab_group` and `repository_url` in `report_details.json`, then run `python tools/build_report.py` to insert them in the PDF. The Markdown report is an editable text copy; the PDF builder reads the experiment and `report_details.json`, not changes made to the Markdown copy. Report body wording is in `tools/build_report.py`.
+Create or fill in `team_members`, `lab_group` and `repository_url` in your local `report_details.json`, then run `python tools/build_report.py` to insert them in the PDF. The Markdown report is an editable text copy; the PDF builder reads the experiment and `report_details.json`, not changes made to the Markdown copy. Report body wording is in `tools/build_report.py`.
 
 Create the public GitHub repository required by the professor. The PowerPoint is left for later. Do not upload `.venv/`, `.runtime/`, `data/` or `tmp/` to GitHub. The three selected demo checkpoints are included in Git (about 14 MB total). Other checkpoints, ZIP archives and preliminary runs are excluded. A clone can run the prediction commands after installing dependencies.
 

@@ -136,7 +136,8 @@ def export(run_directory, destination):
             for path in (root / directory).glob('*.py'):
                 archive.write(path, path.relative_to(root).as_posix())
         for name in ['requirements.txt', 'README.md', 'LIRE_MOI.md', 'ENTRAINEMENT_RAPIDE.md', 'report_details.json', '.gitignore']:
-            archive.write(root / name, name)
+            if (root / name).is_file():
+                archive.write(root / name, name)
         for name in ['export_gpu_project.py', 'build_report.py']:
             archive.write(root / 'tools' / name, 'tools/' + name)
         for name in ['report.pdf', 'report.md']:
