@@ -33,3 +33,12 @@ Thumbs.db
 # Report deliverables are kept locally and submitted separately
 output/pdf/
 report_details.json
+
+# Local working guides and document preparation tools
+COMMANDES_DEMO*.txt
+ENTRAINEMENT_RAPIDE.md
+LIRE_MOI.md
+INSTALLATION_AMI*.txt
+output/gpu/*.txt
+tools/
+Guidelines_RNN_2627.pdf
