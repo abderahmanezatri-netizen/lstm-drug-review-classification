@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "stop_reason": "insufficient_time_for_another_complete_round",
+  "complete_epochs_per_run": 8,
+  "number_of_runs": 12,
+  "total_seconds": 2269.2500000000005,
+  "target_seconds": 2700.0,
+  "round_seconds": [
+    194.35899999999992,
+    282.078,
+    181.51499999999987,
+    298.71900000000005,
+    364.28099999999995,
+    314.578,
+    311.09400000000005,
+    310.31300000000056
+  ]
+}

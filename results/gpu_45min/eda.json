@@ -1,0 +1,38 @@
+{
+  "archive_sha256": "71cf6adb29fe9dd61ae77bed2f5674db623959de38e2f0a51f74f6e91312e519",
+  "duplicates_removed": {
+    "train": 48999,
+    "test": 37622
+  },
+  "vocab_size": 18000,
+  "train": {
+    "size": 15000,
+    "classes": {
+      "positive": 9947,
+      "negative": 3718,
+      "neutral": 1335
+    },
+    "length_median": 97,
+    "length_p90": 162
+  },
+  "val": {
+    "size": 1500,
+    "classes": {
+      "positive": 995,
+      "negative": 372,
+      "neutral": 133
+    },
+    "length_median": 98,
+    "length_p90": 161
+  },
+  "test": {
+    "size": 3000,
+    "classes": {
+      "positive": 1992,
+      "neutral": 267,
+      "negative": 741
+    },
+    "length_median": 96,
+    "length_p90": 163
+  }
+}

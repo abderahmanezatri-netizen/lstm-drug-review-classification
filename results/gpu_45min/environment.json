@@ -1,0 +1,59 @@
+{
+  "torch": "2.14.0+cu130",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "args": {
+    "train_size": 15000,
+    "val_size": 1500,
+    "test_size": 3000,
+    "epochs": 12,
+    "seed": 42,
+    "vocab_size": 18000,
+    "max_length": 160,
+    "embedding_dim": 64,
+    "hidden_size": 64,
+    "batch_size": 256,
+    "threads": 4,
+    "minutes": 45.0,
+    "device": "cuda",
+    "data": "data",
+    "output": "results/gpu_45min"
+  },
+  "numpy": "2.5.3",
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "benchmark_seconds_per_batch": {},
+  "configuration_grid": [
+    [
+      "reference",
+      0.003,
+      256,
+      0.0
+    ],
+    [
+      "learning_rate",
+      0.001,
+      256,
+      0.0
+    ],
+    [
+      "batch_size",
+      0.003,
+      128,
+      0.0
+    ],
+    [
+      "class_weight",
+      0.003,
+      256,
+      0.5
+    ]
+  ],
+  "pooling": "masked mean of recurrent hidden states",
+  "forget_bias": 1.0,
+  "selection": "macro F1 on validation; test evaluated only after selection",
+  "budget_policy": "equal complete rounds; unfinished round excluded from selection"
+}

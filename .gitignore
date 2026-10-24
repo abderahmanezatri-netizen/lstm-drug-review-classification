@@ -1,0 +1,31 @@
+# Python environments and caches
+.venv/
+venv/
+.runtime/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Downloaded data and temporary files
+data/
+tmp/
+*.log
+
+# Archives are generated locally, not versioned
+*.zip
+
+# Keep only the final experiment
+results/*
+!results/gpu_45min/
+results/gpu_45min/checkpoints/*
+!results/gpu_45min/checkpoints/vanilla_class_weight.pt
+!results/gpu_45min/checkpoints/cifg_class_weight.pt
+!results/gpu_45min/checkpoints/wmc_class_weight.pt
+results/gpu_45min/progress.json
+
+# Editor and operating-system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
