@@ -83,7 +83,7 @@ Outputs are probabilities for negative, neutral and positive sentiment. The voca
 ## Reproduce training
 
 ```sh
-python -m src.train_fast --device cuda --epochs 8 --output results/reproduce
+python -m src.train --device cuda --epochs 8 --output results/reproduce
 ```
 
 Use `--device cpu` without CUDA, or `--device auto` to benchmark available devices. The runtime budget can result in fewer complete epochs on slower hardware. Use a new output directory to preserve existing results.
@@ -92,8 +92,7 @@ Use `--device cpu` without CUDA, or `--device auto` to benchmark available devic
 
 - `src/data.py`: dataset loading, preprocessing, vocabulary and splits.
 - `src/models.py`: manually implemented recurrent cells and classifier.
-- `src/train_fast.py`: architecture and configuration comparison.
-- `src/train.py`: evaluation helper and alternative training entry point.
+- `src/train.py`: training, evaluation, and architecture/configuration comparison.
 - `src/predict.py`: inference from a checkpoint.
 - `src/baseline.py`: non-recurrent reference implementations.
 - `tests/`: cell equations, gradients, parameter counts, padding and deduplication checks.
